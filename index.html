@@ -1,1 +1,124 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZONEPUSHER | Gaming Services</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#080808;color:white;font-family:Arial,sans-serif}
+header{padding:20px 7%;display:flex;justify-content:space-between;align-items:center;background:#111;border-bottom:1px solid #292929}
+.logo{font-size:25px;font-weight:900;color:#ff3030}
+nav a{color:white;text-decoration:none;margin:0 10px;font-size:14px}
+button{background:#f22;color:white;border:0;padding:12px 20px;border-radius:6px;font-weight:bold;cursor:pointer}
+.hero{text-align:center;padding:100px 20px;background:radial-gradient(ellipse at center,#381010,#080808 70%)}
+.hero h1{font-size:clamp(38px,8vw,75px);font-weight:900}
+.hero h1 span{color:#ff3030}
+.hero p{color:#bbb;margin:20px auto;max-width:500px;line-height:1.7}
+section{padding:65px 7%}
+.heading{text-align:center;font-size:32px;margin-bottom:35px}
+.heading span{color:#ff3030}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.card{background:#151515;border:1px solid #333;padding:25px;border-radius:12px}
+.card h3{color:#ff4040;margin-bottom:15px}
+.card p{color:#aaa;line-height:1.7}
+.price{font-size:30px;font-weight:bold;margin:20px 0}
+form{max-width:420px;margin:auto;background:#151515;padding:25px;border-radius:12px}
+input{width:100%;padding:14px;margin:9px 0;background:#080808;border:1px solid #444;border-radius:6px;color:white}
+footer{text-align:center;padding:30px;background:#111;color:#888}
+a{color:#ff5555}
+@media(max-width:600px){header{flex-wrap:wrap;gap:15px}nav{width:100%;display:flex;flex-wrap:wrap;gap:10px}nav a{margin:0}}
+</style>
+</head>
+<body>
+
+<header>
+<div class="logo">ZONEPUSHER</div>
+<nav>
+<a href="#home">Home</a>
+<a href="#services">Services</a>
+<a href="#pricing">Pricing</a>
+<a href="#login">Login</a>
+</nav>
+<button onclick="document.querySelector('#login').scrollIntoView()">Join Now</button>
+</header>
+
+<div class="hero" id="home">
+<h1>WELCOME TO <span>ZONEPUSHER</span></h1>
+<p>Professional Gaming Services. Push Your Limits. Play Smart. Experience the next level of gaming.</p>
+<button onclick="document.querySelector('#services').scrollIntoView()">Explore Services</button>
+</div>
+
+<section id="services">
+<h2 class="heading">OUR <span>SERVICES</span></h2>
+<div class="cards">
+<div class="card"><h3>ZONE PUSH</h3><p>Professional zone push service with clear booking details.</p></div>
+<div class="card"><h3>PRIORITY BOOKING</h3><p>Request your preferred service time.</p></div>
+<div class="card"><h3>PLAYER SUPPORT</h3><p>Get assistance with your bookings and queries.</p></div>
+</div>
+</section>
+
+<section id="pricing">
+<h2 class="heading">OUR <span>PRICING</span></h2>
+<div class="cards">
+<div class="card">
+<h3>Basic Push</h3>
+<p>Basic service package</p>
+<div class="price">₹49</div>
+<button onclick="book('Basic Push')">Book Now</button>
+</div>
+<div class="card">
+<h3>Pro Push</h3>
+<p>Professional service package</p>
+<div class="price">₹99</div>
+<button onclick="book('Pro Push')">Book Now</button>
+</div>
+<div class="card">
+<h3>Premium Push</h3>
+<p>Premium service package</p>
+<div class="price">₹199</div>
+<button onclick="book('Premium Push')">Book Now</button>
+</div>
+</div>
+</section>
+
+<section id="login">
+<h2 class="heading">USER <span>LOGIN</span></h2>
+<form onsubmit="event.preventDefault();alert('Authentication will be connected with Supabase in the next step.')">
+<input type="email" placeholder="Enter Email" required>
+<input type="password" placeholder="Enter Password" required>
+<button type="submit" style="width:100%">LOGIN</button>
+<p style="margin-top:15px;color:#aaa">New User? <a href="#register">Register Here</a></p>
+</form>
+</section>
+
+<section id="register">
+<h2 class="heading">CREATE <span>ACCOUNT</span></h2>
+<form onsubmit="event.preventDefault();alert('Registration will be connected with Supabase in the next step.')">
+<input type="text" placeholder="Full Name" required>
+<input type="email" placeholder="Email Address" required>
+<input type="password" placeholder="Create Password" minlength="8" required>
+<button type="submit" style="width:100%">REGISTER</button>
+</form>
+</section>
+
+<section>
+<h2 class="heading">LATEST <span>ANNOUNCEMENTS</span></h2>
+<div class="card"><h3>Welcome to ZONEPUSHER!</h3><p>Our gaming service website is now under development.</p></div>
+</section>
+
+<footer>
+<h3 style="color:#ff3030">ZONEPUSHER</h3>
+<p>Play Smart. Push Hard.</p>
+<p style="margin-top:12px">© 2026 ZONEPUSHER. All Rights Reserved.</p>
+</footer>
+
+<script>
+function book(service){
+alert("Selected: "+service+". Booking system will be connected soon.");
+}
+</script>
+</body>
+</html>
+
